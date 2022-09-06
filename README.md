@@ -4,12 +4,14 @@
 
 ### aclfix.ps1
 Approximate Time Investment: 4 hours
+
 Accomplishments:
 
 This script is designed to read access lists (ACL) for folder permissions from a user-provided CSV file.  The script will read the ACLs and then apply them to the folder provided by the user.  This was an early design to quickly migrate or copy permissions from one share on a Windows File server to another share.
 
 ### activedirectory-newpc.ps1
 Approximate Time Investment: 4 hours
+
 Accomplishments: Accurately accounted for when PCs are added to the domain, allowing for reporting of when PCs are added to the incorrect Organization Units 
 
 This script was intended to regularly notify me of when PCs were added to our domain.  We were having a regularly occurring problem on our helpdesk, where PC's, once added to the domain, were not being placed into the correct organizational units (OUs).  This script was set up as a scheduled task on my computer that would run every Friday at 9:00 AM.  It would allow me to quickly spot PCs that were not moved to the correct OUs and I was able to correct it that very same week.  This was one of the first scripts that I wrote at my job, so it took quite a bit of research to plug it all together, but I found some pieces online to figure out how to accomplish this task.
