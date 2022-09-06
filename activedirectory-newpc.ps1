@@ -1,0 +1,1 @@
+$today = Get-Date -Format "yyyyMMdd"; $d = [DateTime]::Today.AddDays(-7); Get-ADComputer -Filter "whenCreated -ge $d" -Properties whenCreated | Select-Object Name,whenCreated,DistinguishedName | Sort-Object -Property Name | Export-CSV -Path "C:\Users\$env:UserName\Desktop\ActiveDirectoryMonitoring\$($today)-OU-Export.csv"

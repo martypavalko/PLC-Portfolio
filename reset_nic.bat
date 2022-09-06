@@ -1,0 +1,7 @@
+@echo off
+echo Resetting NIC...
+netsh winsock reset
+netsh int ip reset
+ipconfig /release
+ipconfig /renew
+ipconfig /flushdns
