@@ -4,7 +4,6 @@ Write-Host "==============================="
 
 $username = Read-Host "Enter the username for the profile you would like to purge: "
 
-# BRAPP SERVERS
 for ($i = 1; $i -le $num; $i += 1)
 {
     $userProfilePath = "\\rdsh-$i\C$\Users\$username"
