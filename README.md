@@ -3,6 +3,13 @@
 ## GO (Golang)
 
 ### api_custom_reporting
+Approximate Time Investment: 60+ hours
+
+Accomplishments: Designed a way to retrieve data from a product and create a way for it to be more easily manipulated using tools like pandas in Python
+
+This "micro-service" is still in development but the base functionality that was required has been completed.  This was designed to pull data from an API and make it easier to work with.  Inside this API there are computers and software that is installed on each.  The product does not provide an easy way to display what software is installed on each machine.  That is where this application comes in.  It creates a computer object to store information about the computer and then adds a slice to store the software.  So this application goes out to the API to retrieve a full ist of all devices, then iterates through each of them to populate the software list.  This functionality is completed.
+
+I have been working on adding concurrency to this project as well.  The idea behind this is that it will retrieve the software of the next computer before the last one is finished.  This part has been a struggle to implement, but I am still working on it now.
 
 ## Powershell
 
