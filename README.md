@@ -1,5 +1,9 @@
 # PLC PORTFOLIO
 
+## Summary
+
+This README file is going to showcase the highlights of this portfolio.  The descriptions that are included have been included becasue these projects either took the most time to develop or I am very proud of what was accomplished within them.
+
 ## GO (Golang)
 
 ### api_custom_reporting
