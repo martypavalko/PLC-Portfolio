@@ -15,7 +15,6 @@ Approximate Time Investment: 4 hours
 Accomplishments: Accurately accounted for when PCs are added to the domain, allowing for reporting of when PCs are added to the incorrect Organization Units 
 
 This script was intended to regularly notify me of when PCs were added to our domain.  We were having a regularly occurring problem on our helpdesk, where PC's, once added to the domain, were not being placed into the correct organizational units (OUs).  This script was set up as a scheduled task on my computer that would run every Friday at 9:00 AM.  It would allow me to quickly spot PCs that were not moved to the correct OUs and I was able to correct it that very same week.  This was one of the first scripts that I wrote at my job, so it took quite a bit of research to plug it all together, but I found some pieces online to figure out how to accomplish this task.
-
 ### PSTFileFinder.ps1
 Approximate Time Investment 20+ hours
 
@@ -29,6 +28,13 @@ Approximate Time Investment: 30+ hours
 Accomplishments: Clears user profiles from remote desktop session hosts when users call in saying that they cannot connect to the sessions.
 
 This script is used to purge user profiles from remote desktop session hosts.  First it takes the username of the user that is having an issue.  Once inputted, it cycles through the session hosts and tests to make sure a profile has been created for the user.  If it has, it deletes it and the corresponding registry entry.  It then goes to the repository where roaming profiles are stores, and it purges them from there as well.
+
+### get-unusedmailboxes.ps1
+Approximate Time Investment: 20 hours
+
+Accomplishments: Purges unused mailboxes from Exchange servers allowing us to conserve more storage.
+
+This script, though it looks short and simple, took a long time for me to get working correctly.  It retrieves a list of mailboxes from an organizational unit, then it checks the permissions of each mailbox.  If no one else has access to it, then it adds the mailbox to an array.  Once iterations conclude, it iterates through the 
 
 ## Python
 

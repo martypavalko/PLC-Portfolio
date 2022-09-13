@@ -1,4 +1,4 @@
-$mailboxes = Get-Mailbox -OrganizationalUnit "Disabled Users" -ResultSize unlimited
+$mailboxes = Get-Mailbox -OrganizationalUnit "$ou" -ResultSize unlimited
 foreach ($mailbox in $mailboxes) {
    
     $permissions = Get-MailboxPermission $mailbox| Where-Object { $_.IsInherited -eq $false -and $_.AccessRights -like "FullAccess*" }
@@ -10,14 +10,14 @@ foreach ($mailbox in $mailboxes) {
    
     foreach ($permission in $permissions) {
 
-        if ($permission.User.securityidentifier -ne "S-1-5-10"){
+        if ($permission.User.securityidentifier -ne "$sid"){
         $i +=1
         }
     }
 
     if ($i -eq 0) {
         
-           Write-Host $mailbox.Alias
+           remove-mailbox -identity $mailbox.Alias -confirm:$false
                 
         }
 
