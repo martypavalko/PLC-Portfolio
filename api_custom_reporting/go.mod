@@ -1,3 +1,3 @@
-module avi/automox-package-query
+module martypavalko/api_custom_reporting
 
 go 1.19
